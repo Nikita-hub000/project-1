@@ -1,0 +1,553 @@
+@keyframes  rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    
+    /* выше установили ограничения для секции */
+}
+/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__square-pic {
+    height: 568px;
+    width: 568px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+    width: 200px;
+    color: white;
+    margin-right: 0;
+    margin-top: 80px;
+}
+/* логотип яндекса*/
+.logo_place_header{
+    background-image: url("../images/logo.svg");
+    position: absolute;
+    top: 30px;
+    left: 64px;
+    height: 32px;
+    width: 183px;
+    float: none;
+
+}
+/*Научиться учиться*/
+.header__title{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 102px;
+    margin-left: 64px;
+    width: 730px; 
+    line-height: 96px;
+    font-weight: bold;
+}
+/*Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
+*/
+.header__subtitle{
+    position: absolute;
+    bottom: 30px;
+    left: 64px;
+    line-height: 25px;
+    font-weight: normal;
+    font-size: 18px;
+    z-index: 2;
+    width: 338px;
+}
+/*синий квадрат*/
+.header__square-pic{
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 568px;
+    height: 568px;
+    background-color: #2F80ED;
+    z-index: 0;
+    transform: rotate(-15deg);
+    animation: rotate 20s infinite linear;
+    
+}
+/* мальчик */
+.header__main-illustration{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 765px;
+    height: 608px;
+    z-index: 1;
+}
+.header__link{
+    color: #2F80ED;
+    text-decoration: none;
+}
+
+ /*блок*/
+.two-columns{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 80%;
+ margin-bottom: 100px;
+ margin-top: 100px;
+ margin-right: 10%;
+ margin-left: 10%;
+ border: 1px red;
+}
+/*Главные проблемы в обучении*/
+.two-columns__brief {
+    width: 175px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+    color: #2F80ED;
+}
+/*блок с параграфами*/
+.two-columns__main-text{
+    width: 80%;
+    min-width: 784px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/*параграфы*/
+.two-columns__paragraph {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/*вывод*/
+.two-columns__span-accent{
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+.technics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*таблица*/
+.cards{
+    width: 73%;
+    margin: 0 auto 100px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+.technics .section-title{
+    line-height: 1.15;
+}
+/*ячейки нашей таблицы*/
+.cards__item{
+    margin-top: 60px;
+    width: 240px;
+    margin-right: 100px;
+    text-align: center;
+}
+/*картинки в ячейках*/
+.cards__image{
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: 0 40px 0;
+}
+/*заголовки ячеек*/
+.cards__title{
+    margin: 43px auto 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+    
+}
+/*текст в ячейках*/
+.cards__description{
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 16px;
+   
+}
+.video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}/*персональный стиль для заголовка*/
+.video .section-title{
+    line-height: 1.15;
+}/*таблица с видео*/
+.video__iframes{
+    margin: 50px auto -35px; 
+}
+/*видео с ютуба*/
+.video__iframe{
+    margin-right: 20px;
+    width: 516px; 
+    height: 316px;
+}
+.oakley{
+    background-color: #F2F2F2;
+
+}
+/*отступы для блока oakley*/
+.oakley .two-columns{
+    padding-top: 160px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.digits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Цифры и факты*/
+.section-title{
+    margin-top: 100px;
+    margin-bottom: 0;
+    width: 60%;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+/*Про учёбу и мозг*/
+.section-subtitle{
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+/*таблица*/
+.table{
+    width: 1100px;
+    margin: 0 auto 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+/*ячейки таблицы*/
+.table__cell{
+    width: 250px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/*заголовки ячеек*/
+.table__heading{
+line-height: 1.15;
+font-size: 24px;
+font-weight: bold;
+margin-top: 0;
+margin-bottom: 20px;
+}
+/*текст таблицы*/
+.table__text{
+    line-height: 1.2;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.feinman {
+    position: relative;
+    height: 790px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    margin-bottom: 100px;
+    
+}
+/*Метод Фейнмана*/
+.feinman__title {
+    margin-top: 80px;
+    width: 648px;
+    line-height: 1.15;
+    font-size: 120px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    text-align: center;
+    z-index:1;
+}
+/*Выучить и не забыть.*/
+.feinman__subtitle {
+    margin-top: 70px;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    z-index: 2;
+}
+/*подробнее*/
+.feinman__link {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+}
+
+/*картинка*/
+.feinman__pic{
+    position: absolute;
+    width: 867px;
+    height: 637px;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+.khan{
+    background-color: #F2F2F2;
+}
+.khan__container{
+    padding-top: 105px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+/*Салман Хан*/
+.khan__author{
+    margin-top: 0;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 0;
+}/*Весь мир — школа*/
+.khan__title{
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 0;
+}/*длинный текст*/
+.khan__quote {
+    margin-top: 50px;
+    margin-bottom: 36px;
+    width: 790px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+/*Джордж Лукас*/
+.khan__quote-author{
+   margin-bottom: 0;
+   line-height: 1.15;
+   font-size: 24px;
+   font-weight: bold;
+}/*Кинорежиссер, продюсер*/
+.khan__quote-author-subline{
+ margin-top: 10px;
+ line-height: 1.15;
+ font-size: 24px;
+ font-weight: normal;
+}/*таблица с книгой*/
+.khan__book-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 68px;
+    
+}/*картинка книги*/
+.khan__book-pic{
+        margin-right: 20px;
+        height: 608px;
+        width: 620px;
+        object-fit: none;
+        object-position: top left;
+}/*купить*/
+.khan__buy-link{
+    margin-left: 0px;
+    text-decoration: none;
+    line-height: 42px;
+ font-size: 30px;
+ font-weight: normal;
+ color: #2f80ed;
+}
+.kaufman{
+    background-color: #1F1F1F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+}/*Принципы обучения*/
+.section-title_theme_dark{
+    margin-top: 90px;
+    margin-bottom: 0;
+    width: 60%;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}/*от Джоша Кауфмана*/
+.section-subtitle_theme_dark{
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}/*table*/
+.table_theme_dark{ 
+    margin-bottom: 90px;
+    z-index: 1;
+}/*cells*/
+.table__cell_theme_dark{
+    margin-top: 80px;
+    margin-bottom: 0;
+    width: 200px;
+}/*треугольник*/
+.kaufman__triangle{
+    position: absolute;
+    width: 877px;
+    height: 877px;
+    right: -210px;
+    top: 0;
+    z-index: 0;
+    animation: rotate 20s infinite linear;
+}
+.resources{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}/*таблица с логотипами*/
+.resources__logo-zone{
+   display: flex;
+   flex-direction: row;
+   margin: 80px auto 217px;
+   width: 1100px;
+   justify-content: space-between;
+
+}/*логотипы*/
+.resources__logo{
+    width: 270px;
+    height: 38px;
+    text-align: center;
+}
+.footer{
+    background-color: #1F1F1F;
+    color: white;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    
+}/*вся таблица*/
+.footer__columns{
+    width: 90%;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 711px;
+    position: relative;
+    margin: auto;    
+}/*первая колонка с автором и лого*/
+.footer__column_content_copyright{
+    flex-basis: 711px;
+}
+/*автор (то есть я:))*/
+.footer__author{
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 0;
+    
+}/*колонна с информацией*/
+.footer__column_content_info {
+     align-self: space-between;
+    padding-left: 0;
+    top: 20px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+
+/*колонна с соцсетями*/
+.footer__column_content_social {
+    align-self: space-between;
+    top: 20px;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+/*белый лого яндекса*/
+.logo_place_footer{
+    height: 35px;
+}
+/*текст о практикуме и соцсети*/
+.footer__column-heading{
+    font-size: 18px;
+     line-height: 30px;
+     font-weight: bold;
+     margin-bottom: 20px;
+     margin-top: 0;
+}
+/*текст заголовков*/
+.footer__column-link{
+    font-size: 18px;
+     line-height: 30px;
+     font-weight: normal;  
+     color: #ffffff;
+    text-decoration: none; 
+    
+
+}
+/*иконки соцсетей*/
+.footer__social-icon{
+    margin-right: 10px;
+     height: 16px;
+     width: 16px;  
+}
+
